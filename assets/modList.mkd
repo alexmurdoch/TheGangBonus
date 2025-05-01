@@ -1,0 +1,31 @@
+ gold cards : {
+    ThoughtIHadIt: "You only need 4 cards for a straight, flush and straight flush",
+    FlashBang: "the player with the 1 white chip may not take a chip until the river, they are given the remaining chip in other rounds",
+    EyePatch: "you may only look at 1 card until the turn",
+    Oceans: "There is another round after the river, redistribute the white chips",
+    Reverse: `The order is dealt, "River, Turn, Flop`,
+    OhNoMaha: "You are dealt 4 cards, you play precisely 2 from your hand and 3 from the board",
+    Pineapple: `You are dealt 3 cards. on the flop, discard the lowest card that does not connect with the board
+                 (if it could potentially be used for flushes or straights on later streets, it is still discarded but if currently playing in a made hand then it is kept)`,
+    MixUp: "On the flop, the players with the highest and second highest chips swap a card at random",
+    Turrets: "Play as normal but it counts as 2 alarms if you lose",
+    Klutz: "On the river, a player the group chooses discards their hand and draws a new one",
+    SplitCorridors: "Until the turn, players in even seats can only take even chips and players on odd seats can only take odd chips (dealer is seat 1)",
+    DoubleAgent: "An extra hand is dealt, it does not take a chip until the river, 1 player with the 1 white chip may view the hand on the river",
+    PLO5: "3 extra cards, still only playing 2 from hand 3 from board",
+    PLO6: "4 extra cards, way too many, 2 from hand 3 from board",
+    PLOButWeird: "You are dealt 4 Cards and you play precisely 3 of them",
+    CaughtIn4k: "2 extra cards dealt, you may play them all",
+    Wipeout: `2 boards are dealt, on the river the board with the lowest card dealt is wiped, in the event of a tie, 
+                both boards remain and each player plays the board they have the highest ranking hand on`,
+
+},
+
+red cards : {
+    Mansplain: `A player may tell a player what they think they have once per round`,
+    Meh: `Before the river, the players with the highest and lowest orange chip may view eachothers hands`
+}
+
+unused : {
+     "Turrets", "it counts as 2 alarms if you lose.",
+}
