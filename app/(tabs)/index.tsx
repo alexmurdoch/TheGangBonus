@@ -6,22 +6,25 @@ import {
   Text,
   Button,
 } from "react-native";
+import { useSingleSelect } from "../functions/singleSelect";
 
 export default function DifficultyButtons() {
+  const easy = useSingleSelect([1, 2]);
+  const medium = useSingleSelect([3, 4]);
+  const hard = useSingleSelect([5, 6, 7, 8, 9, 10]);
+  const fullRandom = useSingleSelect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
   return (
     <View style={styles.container}>
       <View style={styles.smallContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.titleText}>Full Random</Text>
+        <TouchableOpacity onPress={easy.selectRandomMod}>
+          <Text>Easy</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.titleText}>Easy</Text>
+        <TouchableOpacity onPress={medium.selectRandomMod}>
+          <Text>Medium</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.titleText}>Medium</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.titleText}>Hard</Text>
+        <TouchableOpacity onPress={hard.selectRandomMod}>
+          <Text>Hard</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.titleText}>Custom</Text>

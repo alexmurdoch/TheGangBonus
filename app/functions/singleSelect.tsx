@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, Button } from "react-native";
+import { useState, useEffect } from "react";
 import { goldMods } from "@/assets/mods";
 import { randomGen } from "./randomGen";
 
@@ -12,8 +11,7 @@ type Mod = {
   diffCategory: string;
 };
 
-export const singleSelect = (diff: number[]) => {
-  const initialPool = goldMods.filter((mod) => diff.includes(mod.difficulty));
+export function useSingleSelect(diff: number[]) {
   const [modPool, setModPool] = useState<Mod[]>([]);
   const [selectedMod, setSelectedMod] = useState<Mod | null>(null);
 
@@ -40,23 +38,5 @@ export const singleSelect = (diff: number[]) => {
     setModPool((prev) => prev.filter((_, i) => i !== index));
   };
 
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      {selectedMod ? (
-        <>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-            {selectedMod.name}
-          </Text>
-          <Text>{selectedMod.description}</Text>
-        </>
-      ) : (
-        <Text>No mod selected yet</Text>
-      )}
-      <Button
-        title="Select Mod"
-        onPress={selectRandomMod}
-        disabled={modPool.length === 0}
-      />
-    </View>
-  );
-};
+  return { selectedMod, selectRandomMod };
+}
