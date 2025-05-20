@@ -46,8 +46,7 @@ export const goldMods = [
   },
   {
     name: "Jokers",
-    description: `Shuffle 2 jokers into the deck, if drawn by a player, they count as the best card they can have in the hand, they win ties, if they hit the board,
-       discard the joker and place 2 cards in place (there will be an extra community card)`,
+    description: `Shuffle 2 jokers into the deck, if drawn by a player, they count as the best card they can have in the hand, they win ties, if they hit the board, discard the joker and place 2 cards in place (there will be an extra community card)`,
     category: "none",
     difficulty: 2,
     custom: true,

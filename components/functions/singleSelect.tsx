@@ -20,7 +20,7 @@ export function useSingleSelect(diff: number[]) {
       diff.includes(mod.difficulty)
     );
     setModPool(filteredMods);
-  }, [diff]);
+  }, []);
 
   const selectRandomMod = () => {
     if (modPool.length === 0) {
@@ -36,6 +36,7 @@ export function useSingleSelect(diff: number[]) {
 
     setSelectedMod(mod);
     setModPool((prev) => prev.filter((_, i) => i !== index));
+    return mod;
   };
 
   return { selectedMod, selectRandomMod };
