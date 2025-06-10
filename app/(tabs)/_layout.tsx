@@ -54,6 +54,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="campaignScreen"
+        options={{
+          title: "Campaign",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="military.medal" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

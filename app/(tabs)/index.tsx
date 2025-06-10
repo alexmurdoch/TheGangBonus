@@ -34,49 +34,45 @@ export default function DifficultyButtons() {
   return (
     <View style={styles.container}>
       <View style={styles.smallContainer}>
-        <View style={styles.button}>
-          <TouchableOpacity
-            onPress={() => {
-              const mod = easy.selectRandomMod();
-              if (mod) setActiveMod(mod);
-            }}
-          >
-            <Text style={styles.difficultyText}>Easy</Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            const mod = easy.selectRandomMod();
+            if (mod) setActiveMod(mod);
+          }}
+        >
+          <Text style={styles.difficultyText}>Easy</Text>
+        </TouchableOpacity>
 
-        <View style={styles.button}>
-          <TouchableOpacity
-            onPress={() => {
-              const mod = medium.selectRandomMod();
-              if (mod) setActiveMod(mod);
-            }}
-          >
-            <Text style={styles.difficultyText}>Medium</Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            const mod = medium.selectRandomMod();
+            if (mod) setActiveMod(mod);
+          }}
+        >
+          <Text style={styles.difficultyText}>Medium</Text>
+        </TouchableOpacity>
 
-        <View style={styles.button}>
-          <TouchableOpacity
-            onPress={() => {
-              const mod = hard.selectRandomMod();
-              if (mod) setActiveMod(mod);
-            }}
-          >
-            <Text style={styles.difficultyText}>Hard</Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            const mod = hard.selectRandomMod();
+            if (mod) setActiveMod(mod);
+          }}
+        >
+          <Text style={styles.difficultyText}>Hard</Text>
+        </TouchableOpacity>
 
-        <View style={styles.button}>
-          <TouchableOpacity
-            onPress={() => {
-              const mod = fullRandom.selectRandomMod();
-              if (mod) setActiveMod(mod);
-            }}
-          >
-            <Text style={styles.difficultyText}>Full Random</Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            const mod = fullRandom.selectRandomMod();
+            if (mod) setActiveMod(mod);
+          }}
+        >
+          <Text style={styles.difficultyText}>Full Random</Text>
+        </TouchableOpacity>
       </View>
 
       <SelectedModDisplay mod={activeMod} />

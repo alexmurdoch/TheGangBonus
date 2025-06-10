@@ -16,7 +16,7 @@ type ActiveRoundState = {
   clearModifiers: () => void;
 };
 
-export const useActiveRoundStore = create<ActiveRoundState>((set) => ({
+const useActiveRoundStore = create<ActiveRoundState>((set) => ({
   activeModifiers: [],
 
   addModifier: (mod) =>
@@ -33,3 +33,5 @@ export const useActiveRoundStore = create<ActiveRoundState>((set) => ({
 
   clearModifiers: () => set({ activeModifiers: [] }),
 }));
+
+export default useActiveRoundStore;
